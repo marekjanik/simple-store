@@ -1,0 +1,17 @@
+@mixin flex-center {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+@mixin position-sticky {
+ position: sticky;
+ position: -webkit-sticky;
+ top: 0;
+ z-index: 100;
+}
+
+@mixin menu-color {
+ background-color: #333;
+ box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}

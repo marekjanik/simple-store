@@ -1,0 +1,154 @@
+@import '../../styles/scss/variables';
+@import '../../styles/scss/mixins';
+@import '../../styles/scss/fonts';
+
+.header {
+ @include position-sticky;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: $header-width;
+ height: $header-height;
+ padding: 10px 20px;
+ @include menu-color;
+
+ &__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ &__logo {
+  border: 2px solid $header-font-color;
+  padding: 2px 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: $main-font;
+  font-size: $header-logo-size;
+  color: $header-font-color;
+ }
+
+ &__menu {
+  display: flex;
+  justify-content: flex-end;
+  width: $header-menu-width;
+  margin-right: 10vw;
+  list-style: none;
+ }
+
+ &__link {
+  position: relative;
+  margin: 0 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: $main-font;
+  font-size: $header-font-size;
+  font-weight: 400;
+  color: $header-font-color;
+  transition: 0.2s;
+ }
+
+ &__link:hover {
+  color: #fff;
+ }
+
+ &__link:active {
+  color: $header-font-color;
+ }
+
+ &__link::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #fff;
+  content: '';
+  transition: 0.2s;
+ }
+
+ &__link:hover::before {
+  width: 50%;
+ }
+
+ &__panel {
+  @include flex-center;
+  height: $header-panel-height;
+  width: $header-panel-width;
+ }
+
+ &__bars {
+  display: none;
+  margin-right: 20px;
+  font-size: $header-bars-size;
+  color: $header-font-color;
+  cursor: pointer;
+  transition: 0.2s;
+ }
+
+ &__bars:hover {
+  color: #fff;
+ }
+
+ &__popup {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 5px;
+ }
+
+ &__panel:hover .header__popup {
+  display: block;
+ }
+}
+
+@media screen and (max-width: 960px) {
+ .header__bars {
+  display: block;
+ }
+
+ .header__menu {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  left: -100%;
+  z-index: -1;
+  width: $header-mobile-menu-width;
+  height: $header-mobile-menu-height;
+  border: $popup-border;
+  background-color: $popup-background-color;
+  opacity: 0;
+  transition: 0.5s;
+ }
+
+ .header__link {
+  font-size: $header-mobile-link-font-size;
+  font-weight: 500;
+  color: $popup-font-color;
+ }
+
+ .header__link:hover {
+  color: $popup-font-color;
+ }
+
+ .header__menu--active {
+  left: 0;
+  opacity: 1;
+ }
+
+ .header__popup {
+  display: none;
+ }
+
+ .header__panel:hover .header__popup {
+  display: none;
+ }
+}
+
+@media screen and (max-width: 373px) {
+ .header__logo {
+  font-size: 7vw;
+ }
+}

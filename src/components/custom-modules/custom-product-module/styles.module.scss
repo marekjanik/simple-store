@@ -1,0 +1,79 @@
+@import '../../../styles/scss/variables';
+
+.product {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: $custom-product-width;
+ margin-top: $custom-product-margin;
+
+ &__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: $custom-product-top-width;
+ }
+
+ &__image {
+  width: $custom-product-image-width;
+ }
+
+ &__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: $custom-product-info-width;
+ }
+
+ &__bottom {
+  width: $custom-product-bottom-width;
+ }
+}
+
+.ProductImage {
+ background-color: $main-background-color;
+}
+
+.ProductTitle {
+ margin-bottom: $custom-product-margin;
+}
+
+.ProductPrice {
+ margin-bottom: $custom-product-margin;
+}
+
+.ProductVariantSelector {
+ margin-bottom: $custom-product-margin;
+}
+
+.ProductAvailabilityInfo {
+ margin-bottom: $custom-product-margin;
+}
+
+@media screen and (max-width: 960px) {
+ .product__top {
+  flex-direction: column;
+  margin: 0 auto;
+ }
+
+ .product__info {
+  width: 80vw;
+ }
+
+ .ProductTitle {
+  display: flex;
+  align-items: center;
+ }
+
+ .ProductPrice {
+  display: flex;
+  justify-content: center;
+ }
+}
+
+@media screen and (max-width: 373px) {
+ .product__image {
+  width: 80vw;
+ }
+}

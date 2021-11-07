@@ -1,0 +1,8 @@
+@import '../../styles/scss/variables';
+
+.app {
+ width: 100%;
+ max-width: $app-max-width;
+ min-height: $app-min-height;
+ background-color: $main-background-color;
+}

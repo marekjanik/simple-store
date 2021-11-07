@@ -1,0 +1,43 @@
+// App
+$app-max-width: 4096px;
+$app-min-height: 100vh;
+
+// Header
+$header-width: 100%;
+$header-height: 70px;
+$header-logo-size: 25px;
+$header-menu-width: 100%;
+$header-panel-width: 90px;
+$header-panel-height: 45px;
+$header-font-size: 17px;
+$header-bars-size: 40px;
+$header-mobile-link-font-size: 20px;
+$header-mobile-menu-width: 100vw;
+$header-mobile-menu-height: 50vh;
+
+// Popup
+$popup-border: 1px solid #e7e7e7;
+
+// CustomCartModule
+$cart-max-width: 370px;
+$cart-width: 100%;
+$cart-list-max-height: 380px;
+$cart-font-size: 12px;
+$product-min-height: 100px;
+$product-max-width: 200px;
+$product-info-width: 100%;
+
+// CustomProductModule
+$custom-product-width: 100%;
+$custom-product-top-width: 80%;
+$custom-product-bottom-width: 80%;
+$custom-product-image-width: 350px;
+$custom-product-info-width: 30vw;
+$custom-product-margin: 30px;
+
+// Colors
+$main-background-color: #f6f6f6;
+$popup-background-color: #fff;
+$popup-font-color: #4f5058;
+$product-brand-color: #a3a0a0;
+$header-font-color: #eee;

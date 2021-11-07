@@ -1,0 +1,32 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: sans-serif;
+}
+
+.te-cart {
+ color: #eee;
+ transition: 0.2s;
+}
+
+.te-cart-size-indicator.te-primary-fill {
+ background-color: #eee;
+ color: #333;
+ transition: 0.2s;
+}
+
+.te-cart:hover {
+ color: #fff;
+}
+
+.te-cart:hover .te-cart-size-indicator.te-primary-fill {
+ background-color: #fff;
+}
+
+.slick-list {
+ background-color: #f6f6f6;
+}
