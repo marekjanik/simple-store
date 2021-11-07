@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from '../../components';
+import { Container, Header, Footer } from '../../components';
 import {
  ModularCheckout,
  CheckoutOrderConfirmation
@@ -7,11 +7,12 @@ import {
 
 export const ConfirmationPage: React.FC = () => {
  return (
-  <div>
+  <Container>
    <Header />
    <ModularCheckout>
     <CheckoutOrderConfirmation />
    </ModularCheckout>
-  </div>
+   <Footer />
+  </Container>
  );
 };

@@ -1,0 +1,88 @@
+@import '../../styles/scss/variables';
+@import '../../styles/scss/mixins';
+@import '../../styles/scss/fonts';
+
+.footer {
+ @include flex-center;
+ justify-content: space-between;
+ width: 100%;
+ height: 140px;
+ padding: 0 100px;
+ @include menu-color;
+ color: $footer-font-color;
+
+ &__socials {
+  @include flex-center;
+  justify-content: space-between;
+  width: 100px;
+  font-size: 30px;
+ }
+
+ &__facebook {
+  color: $footer-facebook-color;
+  cursor: pointer;
+  transition: 0.2s;
+ }
+
+ &__facebook:hover {
+  color: $footer-font-color;
+ }
+
+ &__instagram {
+  color: $footer-instagram-color;
+  cursor: pointer;
+  transition: 0.2s;
+ }
+
+ &__instagram:hover {
+  color: $footer-font-color;
+ }
+
+ &__twitter {
+  color: $footer-twitter-color;
+  cursor: pointer;
+  transition: 0.2s;
+ }
+
+ &__twitter:hover {
+  color: $footer-font-color;
+ }
+
+ &__navigation {
+  font-size: 17px;
+ }
+
+ &__link {
+  border-right: 2px solid $footer-link-color;
+  text-decoration: none;
+  padding: 0 10px;
+  font-family: $main-font;
+  color: $footer-link-color;
+ }
+
+ &__link:nth-last-of-type(1) {
+  border: none;
+ }
+
+ &__link:active {
+  color: $footer-link-color;
+ }
+
+ &__contact {
+  font-size: 17px;
+  font-family: $main-font;
+ }
+}
+
+@media screen and (max-width: 960px) {
+ .footer {
+  flex-direction: column;
+  padding: 20px 0;
+ }
+}
+
+@media screen and (max-width: 373px) {
+ .footer__navigation {
+  font-size: 12px;
+ }
+}
