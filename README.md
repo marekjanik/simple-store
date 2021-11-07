@@ -1,4 +1,4 @@
-# React Todo App
+# Simple Store
 
 ## General Info
 
